@@ -1,0 +1,33 @@
+server:
+  port: 8082
+
+spring:
+  profiles:
+    active: dev
+
+
+atm:
+  denominations:
+    allowed:  10,20,50
+---
+
+spring:
+  profiles: dev
+  h2:
+    console:
+      enabled: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    password: password
+    url: jdbc:h2:mem:atmDispapp
+    username: sa
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+welcome:
+  message: Welcome to Daily Code Buffer!!
+
+---
+
