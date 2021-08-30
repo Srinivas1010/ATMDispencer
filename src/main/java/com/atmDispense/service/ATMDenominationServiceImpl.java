@@ -144,8 +144,9 @@ public class ATMDenominationServiceImpl implements ATMDenominationService {
 
                 atmDenominations.setAvailableDenominationCount(atmDenominations.getAvailableDenominationCount() - possibleOption[j]);
 
-                if(atmDenominations.getAvailableDenominationCount()==0)
+                if(atmDenominations.getAvailableDenominationCount()==0){
                     //TODO Should trigger Notification to inform about no-cash
+		}
 
                 j++;
             }
